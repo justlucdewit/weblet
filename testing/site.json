@@ -1,0 +1,12 @@
+{
+  "outName": "index.html",
+  "cssStyle" : "external",
+  "outStyle": "compress",
+  "title": "Weblet testing",
+  "description": "A site to test out Weblet",
+  "author": "Luc de Wit",
+  "keywords": ["testing", "Weblet", "static", "site", "generator", "html", "json"],
+  "header": {
+    "content": "Weblet testing"
+  }
+}

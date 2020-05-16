@@ -1,0 +1,14 @@
+{
+  "bin": {
+    "weblet": "./dist/weblet.js"
+  },
+  "name": "weblet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/weblet.js",
+  "author": "Luc de Wit",
+  "license": "ISC",
+  "dependencies": {
+    "js-beautify": "^1.11.0"
+  }
+}
