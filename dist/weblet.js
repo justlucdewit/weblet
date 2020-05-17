@@ -2,6 +2,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Website_1 = require("./Website");
+var perf_hooks_1 = require("perf_hooks");
 var fs = require("fs");
 var version = "1.0.0";
 if (process.argv.length > 2) {
@@ -11,7 +12,10 @@ if (process.argv.length > 2) {
         }
         else {
             var json = JSON.parse(data);
-            new Website_1.Website(json).render();
+            var start = perf_hooks_1.performance.now();
+            if (new Website_1.Website(json).render()) {
+                console.log("done! took " + Math.round((perf_hooks_1.performance.now() - start) * 100) / 100 + " ms");
+            }
         }
     });
 }

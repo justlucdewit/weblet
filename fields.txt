@@ -1,0 +1,13 @@
+// compiler options
+outName:        the name of the output files
+cssStyle:       "internal" or "external" this determains where the css will be placed
+outStyle:       "normal" or "compress" this is an option to compress the output code
+
+// meta
+title:          the text inside the title tags
+description:    the discription of the project
+author:         the name of the author
+keywords:       an array of keywords discribing the project
+
+// header
+header.content: the content of the header tag

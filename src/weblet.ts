@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { Website} from "./Website";
+import { performance } from "perf_hooks"
 
 const fs = require("fs");
 
@@ -11,7 +12,10 @@ if (process.argv.length > 2) {
             console.log(`error trying to read file ${process.argv[2]}: ${err}`);
         }else {
             const json = JSON.parse(data);
-            new Website(json).render();
+            const start = performance.now();
+            if (new Website(json).render()){
+                console.log(`done! took ${Math.round((performance.now()-start)*100)/100} ms`)
+            }
         }
     });
 }else{
